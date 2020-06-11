@@ -14,7 +14,7 @@ int main(void)
 
 	while (o < 26)
 	{
-		letter = alphabet[i];
+		letter = alphabet[o];
 		if (o == 4 || o == 16)
 		{
 			o++;
