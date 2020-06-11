@@ -17,7 +17,8 @@ int main(void)
 	f = n % 10;
 	if (f > 5)
 	{
-		printf("Last digit of %d is %d and is grater than 5 and is not zero\n", n, f);
+		printf("Last digit of %d is %d and is grater", n, f);
+		printf("than 5 and is not zero\n");
 	}
 	else if (f == 0)
 	{
@@ -25,7 +26,8 @@ int main(void)
 	}
 	else
 	{
-		printf("last digit of %d is %d and is less than 6 and is not a zero\n", n, f);
+		printf("last digit of %d is %d and is less", n, f);
+		printf("than 6 and is not a zero\n");
 	}
 		return (0);
 }
