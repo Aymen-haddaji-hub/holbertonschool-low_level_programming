@@ -5,16 +5,20 @@
  *
  * Return: Always 0.
  */
-void print_alphabet_x10(void);
+void print_alphabet_x10(void)
 {
-	char b;
-	int i;
+	char az = 'a';
+	int count = 1;
 
-	while (i++ <= 9)
+	while (count < 11)
 	{
-		for (b = 'a'; b <= 'z'; b++)
-			_putchar(b);
-			_putchar("\n");
-	return (0);
+		while (az <= 'z')
+		{
+			_putchar(az);
+			az++;
+		}
+		_putchar('\n');
+		az = 'a';
+		number++;
 	}
 }
