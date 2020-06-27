@@ -1,29 +1,19 @@
 #include "holberton.h"
-
 /**
- * rot13 - conver string o rot13
- * @s: string
- * Return: string
+ * rot13 - translates string to ROT13
+ * @s: input string to be translated
+ *
+ * Return: string after conversion of ROT13
  */
-
 char *rot13(char *s)
 {
-	int i;
+	int i, j;
+	char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rot_it[] =   "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if ((s[i] >= 'a' && s[i] <= 'm') || (s[i] >= 'A' && s[i] <= 'M'))
-		{
-			s[i] = (s[i] + 13);
-		}
-		else
-			while ((s[i] >= 'n' && s[i] <= 'z') ||
-			      (s[i] >= 'N' && s[i] <= 'Z'))
-			{
-				s[i] = (s[i] - 13);
-			}
-		i++;
-	}
+	for (i = 0; s[i] != '\0'; i++)
+		for (j = 0; j < 52; j++)
+			if (s[i] == alphabet[j])
+				s[i] = rot_it[j], j = 52;
 	return (s);
 }
