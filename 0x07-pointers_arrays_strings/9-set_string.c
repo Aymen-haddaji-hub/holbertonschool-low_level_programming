@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * set_string - Function that sets the value of a pointer to a char.
  * @s: Pointer to a pointer
