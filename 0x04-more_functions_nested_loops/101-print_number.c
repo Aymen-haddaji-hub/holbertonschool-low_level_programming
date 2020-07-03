@@ -1,45 +1,34 @@
 #include "holberton.h"
-
+void print_unsigned_int(unsigned int n);
 /**
- * print_number - prints the number
+ * print_number - print number n with putchar
+ *
  * @n: number to print
- * Return:none
+ *
+ * Return: always void
  */
-
 void print_number(int n)
 {
-	int i, digit, place, fake_bool;
-	long j;
-	char num[1000];
-
-	place = 0;
-	fake_bool = 0;
-	j = n;
-	if (j < 0)
+	if (n < 0)
 	{
-		j = j * -1;
-		fake_bool = 1;
+		_putchar('-');
+		print_unsigned_int(-(unsigned int)n);
 	}
-	while ((j / 10) != 0)
+	else
+		print_unsigned_int(n);
+}
+/**
+ * print_unsigned_int - prints an unsigned integer
+ *
+ * @n: an unsigned integer to print
+ *
+ * Return: always void
+ */
+void print_unsigned_int(unsigned int n)
+{
+	if (n / 10 != 0)
 	{
-		digit = j % 10;
-		num[place] = digit;
-		place++;
-		j = j / 10;
+		print_unsigned_int(n / 10);
 	}
-	num[place] = j;
-	if (fake_bool == 1)
-	{
-		place++;
-		num[place] = '-';
-	}
-	for (i = place; i >= 0; i--)
-	{
-		if (num[i] != '-')
-		{
-			_putchar(num[i] + '0');
-		}
-		else
-			_putchar('-');
-	}
+	_putchar((n % 10) + '0');
 }
