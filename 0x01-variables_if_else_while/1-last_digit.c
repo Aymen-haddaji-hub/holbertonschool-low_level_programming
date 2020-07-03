@@ -1,33 +1,30 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
 /* more headers goes there */
-#include <stdio.h>
 /**
- * main - Entry point
+ * main - entry point function
  *
- * Return: Always 0 (Success)
+ * Description: prints only last digit of num
+ * stored in n
+ *
+ * Return: always 0 (success)
  */
+/* betty style doc for function main goes there */
 int main(void)
 {
-	int n, f;
+	int n, q;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	/* My code written By aymen Haddji */
-	f = n % 10;
-	if (f > 5)
-	{
-		printf("Last digit of %d is %d and is grater", n, f);
-		printf("than 5 and is not zero\n");
-	}
-	else if (f == 0)
-	{
-		printf("last digit of %d is %d and is zero\n", n, f);
-	}
-	else
-	{
-		printf("last digit of %d is %d and is less", n, f);
-		printf("than 6 and is not a zero\n");
-	}
-		return (0);
+	q = n % 10;
+
+	printf("Last digit of %i is %i ", n, q);
+	if (q > 5)
+		printf("and is greater than 5\n");
+	else if (q < 6 && q != 0)
+		printf("and is less than 6 and not 0\n");
+	else if (q == 0)
+		printf("and is 0\n");
+	return (0);
 }
