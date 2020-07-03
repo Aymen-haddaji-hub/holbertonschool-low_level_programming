@@ -2,7 +2,7 @@
 
 /**
  * _islower - checks for lowercase letters
- *
+ *@c: a variable of type integr
  * Return: 0 or 1
  */
 
