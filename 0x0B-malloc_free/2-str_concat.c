@@ -2,11 +2,10 @@
 #include <stdlib.h>
 
 /**
- *str_concat - returns a pointer that contains a string
- * that is a combination of two strings
- * @s1: string 1
- * @s2: string 2
- * Return: pointer to the concatenated string
+ * *str_concat - concatenates two strings
+ * @s1: string src
+ * @s2: string src 2
+ * Return: pointer to the concatenated string if fail return null
  */
 
 char *str_concat(char *s1, char *s2)
