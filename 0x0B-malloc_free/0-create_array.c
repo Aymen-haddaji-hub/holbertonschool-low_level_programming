@@ -3,28 +3,29 @@
 #include "holberton.h"
 
 /**
- * create_array - create an array of chars, with a specific char
+ * create_array -a function that creates an array of chars, and initializes it with a specific char.
  * @size: size
  * @c: character c
- * Return: c
+ * Return: NULL if size = 0
+ * Returns a pointer to the array
  */
 
 char *create_array(unsigned int size, char c)
 {
-	char *array;
+	char *a;
 	unsigned int i;
 
 	if (size != 0)
-		array = malloc(size * sizeof(c));
+		a = malloc(size * sizeof(c));
 	else
 		return (NULL);
-	if (array == NULL)
+	if (a == NULL)
 		return (NULL);
 	i = 0;
 	while (i < size)
 	{
-		array[i] = c;
+		a[i] = c;
 		i++;
 	}
-	return (array);
+	return (a);
 }
