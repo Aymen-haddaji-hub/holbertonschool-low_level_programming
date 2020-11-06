@@ -15,5 +15,5 @@ def island_perimeter(grid):
                 mourabaa += 1
                 if (i > 0 and grid[i - 1][j] == 1):
                     mourabamahsour += 2
-                    
-    return (mourabaa * 4) - (mourabamahsour * 2)
+
+    return mourabaa * 4 - mourabamahsour * 2
