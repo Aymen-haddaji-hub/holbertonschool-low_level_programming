@@ -4,5 +4,15 @@
 
 def island_perimeter(grid):
     """Return the perimiter of an island."""
-    print(12)
-    
+    toul = len(grid)
+    oordh = len(grid[0])
+    mourabamahsour = 0
+    mourabaa = 0
+
+    for i in range(toul):
+        for j in range(oordh):
+            if grid[i][j] == 1:
+                mourabaa += 1
+                if (i > 0 and grid[i - 1][j] == 1) or (j > 0 and grid[i][j - 1] == 1):
+                    mourabamahsour += 1
+    return (mourabaa * 4) - (mourabamahsour * 2)
