@@ -13,6 +13,7 @@ def island_perimeter(grid):
         for j in range(oordh):
             if grid[i][j] == 1:
                 mourabaa += 1
-                if (i > 0 and grid[i - 1][j] == 1) or (j > 0 and grid[i][j - 1] == 1):
-                    mourabamahsour += 1
+                if (i > 0 and grid[i - 1][j] == 1):
+                    mourabamahsour += 2
+                    
     return (mourabaa * 4) - (mourabamahsour * 2)
